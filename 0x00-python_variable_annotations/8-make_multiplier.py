@@ -7,6 +7,8 @@ return_func: Callable[[float], float]
 
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
+    """ returns a callable function """
     def return_func(arg: float) -> float:
+        """ returns the multiplication product """
         return arg * multiplier
     return return_func

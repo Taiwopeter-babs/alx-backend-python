@@ -12,7 +12,7 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
     returns a list of result of a coroutine run n times. The
     list is a list of tasks that were completed in a timely order
     """
-    task_list: list = []
+    task_list: List[asyncio.Task] = []
     done_tasks: list = []
 
     for _ in range(0, n):
